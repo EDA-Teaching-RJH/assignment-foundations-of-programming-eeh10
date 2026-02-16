@@ -18,3 +18,36 @@ def display_menu(user):
     print("9 Exit")
     choice = input("Choice: ")
     return choice
+
+def add_member(names, ranks, divs, ids):
+    name = input("Name: ")
+    rank = input("Rank: ")
+    div = input("Division: ")
+    new_id = int(input("ID: "))
+
+    if new_id in ids:
+        print("ID exists")
+        return
+
+    # simple rank check
+    valid = False
+    if rank == "Captain":
+        valid = True
+    if rank == "Commander":
+        valid = True
+    if rank == "Lt. Commander":
+        valid = True
+    if rank == "Lieutenant":
+        valid = True
+    if rank == "Ensign":
+        valid = True
+
+    if valid == False:
+        print("Bad rank")
+        return
+
+    names.append(name)
+    ranks.append(rank)
+    divs.append(div)
+    ids.append(new_id)
+    print("Added")
