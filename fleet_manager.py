@@ -65,7 +65,7 @@ def remove_member(names, ranks, divs, ids):
     else:
         print("Not found")
 
-      def update_rank(names, ranks, ids):
+def update_rank(names, ranks, ids):
     target = int(input("ID: "))
 
     if target in ids:
