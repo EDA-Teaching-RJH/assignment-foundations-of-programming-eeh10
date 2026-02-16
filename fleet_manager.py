@@ -80,3 +80,9 @@ def display_roster(names, ranks, divs, ids):
     print("\nRoster:")
     for i in range(len(names)):
         print(ids[i], names[i], ranks[i], divs[i])
+
+def search_crew(names, ranks, divs, ids):
+    term = input("Search: ")
+    for i in range(len(names)):
+        if term.lower() in names[i].lower():
+            print(ids[i], names[i], ranks[i], divs[i])
