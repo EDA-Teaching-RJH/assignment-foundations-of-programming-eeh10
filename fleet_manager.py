@@ -86,3 +86,9 @@ def search_crew(names, ranks, divs, ids):
     for i in range(len(names)):
         if term.lower() in names[i].lower():
             print(ids[i], names[i], ranks[i], divs[i])
+
+def filter_by_division(names, divs):
+    choice = input("Division: ")
+    for i in range(len(names)):
+        if divs[i] == choice:
+            print(names[i])
