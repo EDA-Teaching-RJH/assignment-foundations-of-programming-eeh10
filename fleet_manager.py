@@ -75,3 +75,8 @@ def remove_member(names, ranks, divs, ids):
         print("Updated")
     else:
         print("Not found")
+
+def display_roster(names, ranks, divs, ids):
+    print("\nRoster:")
+    for i in range(len(names)):
+        print(ids[i], names[i], ranks[i], divs[i])
