@@ -51,3 +51,18 @@ def add_member(names, ranks, divs, ids):
     divs.append(div)
     ids.append(new_id)
     print("Added")
+
+def remove_member(names, ranks, divs, ids):
+    target = int(input("ID: "))
+
+    if target in ids:
+        i = ids.index(target)
+        names.pop(i)
+        ranks.pop(i)
+        divs.pop(i)
+        ids.pop(i)
+        print("Removed")
+    else:
+        print("Not found")
+
+        
