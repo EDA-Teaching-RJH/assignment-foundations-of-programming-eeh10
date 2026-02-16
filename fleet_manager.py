@@ -92,3 +92,20 @@ def filter_by_division(names, divs):
     for i in range(len(names)):
         if divs[i] == choice:
             print(names[i])
+
+def calculate_payroll(ranks):
+    total = 0
+
+    for r in ranks:
+        if r == "Captain":
+            total += 1000
+        elif r == "Commander":
+            total += 800
+        elif r == "Lt. Commander":
+            total += 600
+        elif r == "Lieutenant":
+            total += 400
+        elif r == "Ensign":
+            total += 200
+
+    return total
